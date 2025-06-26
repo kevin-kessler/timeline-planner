@@ -57,16 +57,10 @@ pnpm build
 Individual commands:
 
 ```bash
-pnpm build:client    # Build Vite app to client/dist
-pnpm build:server    # Compile server to dist/server
-```
-
----
-
-## ✅ Type Checking
-
-```bash
-pnpm type-check      # Run type-checking on client and server
+pnpm build:client       # Build Vite app to client/dist
+pnpm type-check         # Run type-checking on client and server
+pnpm type-check:client  # Run type-checking on client only
+pnpm type-check:server  # Run type-checking on server only
 ```
 
 ---
@@ -79,23 +73,11 @@ Lint the code:
 pnpm lint
 ```
 
-Auto-fix issues:
+Auto-fix linting issues:
 
 ```bash
 pnpm lint-fix
 ```
-
----
-
-## 🔍 Preview (Client Only)
-
-Preview the production build of the client:
-
-```bash
-pnpm preview
-```
-
-> This does **not** run the backend. Use `pnpm start:server` to start the API in production mode.
 
 ---
 
@@ -106,7 +88,7 @@ pnpm preview
 ├── client/           # Frontend (Vue 3 + Vite + Tailwind)
 ├── server/           # Backend (Express + TypeScript)
 ├── shared/           # Shared utilities and types for both, client and server
-├── .env              # Environment config (project root)
+├── .env              # Environment config for local dev (project root)
 └── package.json
 ```
 

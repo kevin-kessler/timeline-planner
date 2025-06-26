@@ -7,16 +7,14 @@
         "dev": "run-p dev:client dev:server",
         "dev:client": "vite --config client/vite.config.js",
         "dev:server": "tsx --tsconfig server/tsconfig.json server/src/index.ts",
-        "build": "run-p type-check build:client build:server",
+        "build": "run-p type-check build:client",
         "build:client": "vite build --config client/vite.config.js",
-        "build:server": "tsc --project server/tsconfig.json",
-        "start:server": "node dist/server/src/index.js",
+        "start:server": "node server/src/index.js",
         "type-check": "run-p type-check:client type-check:server",
         "type-check:client": "vue-tsc --project client/tsconfig.json --noEmit",
         "type-check:server": "tsc --project server/tsconfig.json --noEmit",
         "lint": "eslint",
-        "lint-fix": "eslint --fix",
-        "preview": "vite preview --config client/vite.config.js"
+        "lint-fix": "eslint --fix"
     },
     "dependencies": {
         "@primeuix/themes": "^1.1.1",
