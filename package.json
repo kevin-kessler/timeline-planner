@@ -10,6 +10,7 @@
         "build": "run-p type-check build:client",
         "build:client": "vite build --config client/vite.config.js",
         "build:server": "tsc --project server/tsconfig.json && tsc-alias -p server/tsconfig.json --resolve-full-paths",
+        "start": "pnpm start:server",
         "start:server": "node dist/server/server/src/index.js",
         "type-check": "run-p type-check:client type-check:server",
         "type-check:client": "vue-tsc --project client/tsconfig.json --noEmit",
