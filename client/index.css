@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+
+:root {
+    --card-width: 11.8rem; /* equivalent to w-48 in Tailwind */
+
+    --board-bg-color: var(--p-surface-100);
+    --card-body-color: var(--p-surface-100);
+    --card-body-text-color: var(--p-surface-800);
+    --card-footer-color: var(--p-surface-200);
+    --card-footer-text-color: var(--p-orange-700);
+
+    --p-button-text-primary-hover-background: var(--p-primary-200);
+    --p-button-text-primary-focus-background: var(--p-primary-200);
+    --p-button-text-primary-active-background: var(--p-primary-300);
+
+    --p-button-outlined-primary-hover-background: var(--p-primary-200);
+    --p-button-outlined-primary-focus-background: var(--p-primary-200);
+    --p-button-outlined-primary-active-background: var(--p-primary-300);
+
+    --p-button-text-danger-hover-background: var(--p-red-200);
+    --p-button-text-danger-focus-background: var(--p-red-200);
+    --p-button-text-danger-active-background: var(--p-red-300);
+
+    --p-button-text-secondary-color: var(--p-surface-500);
+    --p-button-text-secondary-hover-background: var(--p-surface-300);
+    --p-button-text-secondary-focus-background: var(--p-surface-300);
+    --p-button-text-secondary-active-background: var(--p-surface-400);
+
+    --p-button-outlined-secondary-color: var(--p-surface-500);
+    --p-button-outlined-secondary-border-color: var(--p-surface-500);
+    --p-button-outlined-secondary-hover-background: var(--p-surface-300);
+    --p-button-outlined-secondary-focus-background: var(--p-surface-300);
+    --p-button-outlined-secondary-active-background: var(--p-surface-400);
+}
+
+.dark-mode-enabled {
+    --board-bg-color: var(--p-surface-700);
+    --card-body-color: var(--p-surface-700);
+    --card-body-text-color: var(--p-surface-100);
+    --card-footer-color: var(--p-surface-800);
+    --card-footer-text-color: var(--p-orange-300);
+
+    --p-button-text-primary-hover-background: var(--p-primary-200);
+    --p-button-text-primary-focus-background: var(--p-primary-200);
+    --p-button-text-primary-active-background: var(--p-primary-300);
+
+    --p-button-outlined-primary-hover-background: var(--p-primary-200);
+    --p-button-outlined-primary-focus-background: var(--p-primary-200);
+    --p-button-outlined-primary-active-background: var(--p-primary-300);
+
+    --p-button-text-danger-hover-background: var(--p-red-200);
+    --p-button-text-danger-focus-background: var(--p-red-200);
+    --p-button-text-danger-active-background: var(--p-red-300);
+
+    --p-button-text-secondary-color: var(--p-surface-100);
+    --p-button-text-secondary-hover-background: var(--p-surface-400);
+    --p-button-text-secondary-focus-background: var(--p-surface-400);
+    --p-button-text-secondary-active-background: var(--p-surface-500);
+
+    --p-button-outlined-secondary-color: var(--p-surface-100);
+    --p-button-outlined-secondary-border-color: var(--p-surface-100);
+    --p-button-outlined-secondary-hover-background: var(--p-surface-400);
+    --p-button-outlined-secondary-focus-background: var(--p-surface-400);
+    --p-button-outlined-secondary-active-background: var(--p-surface-500);
+}
+
+.p-confirmpopup-footer .confirm-deletion {
+    @apply text-xs text-white border-none;
+    @apply bg-[var(--p-button-danger-background)];
+    @apply hover:bg-[var(--p-button-danger-hover-background)];
+}

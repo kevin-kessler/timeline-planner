@@ -1,0 +1,44 @@
+{
+    "extends": "@vue/tsconfig/tsconfig.dom.json",
+    "compilerOptions": {
+        "noEmit": true,
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "verbatimModuleSyntax": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowImportingTsExtensions": true,
+        "strict": true,
+        "baseUrl": ".",
+        "paths": {
+            "@client/*": [
+                "client/*"
+            ],
+            "@server/*": [
+                "server/*"
+            ],
+            "@shared/*": [
+                "shared/*"
+            ],
+        },
+        "types": [
+            "node",
+            "pinia",
+            "vite/client",
+            "vue",
+        ],
+    },
+    "exclude": [
+        "dist",
+        "node_modules",
+    ],
+    "include": [
+        "env.d.ts",
+        "client/**/*",
+        "client/**/*.vue",
+        "server/**/*",
+        "shared/**/*",
+        "components.d.ts",
+    ],
+}
