@@ -27,7 +27,7 @@ app.use(cors({
 app.use('', routes);
 
 // Serve static client files in production
-if (process.env.NODE_ENV === 'production') {
+if (config.serverEnv === 'production') {
     const clientDistPath = path.resolve(DIR_NAME, '../client/dist');
     app.use(express.static(clientDistPath));
 

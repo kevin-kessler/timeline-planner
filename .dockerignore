@@ -1,0 +1,10 @@
+node_modules
+client/dist
+coverage
+server/board-data/
+
+.vscode
+.vscode/*
+*.log
+.DS_Store
+.pnpm-store
