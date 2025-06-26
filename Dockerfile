@@ -26,4 +26,4 @@ COPY --from=builder /app/dist/client ./dist/client
 COPY --from=builder /app/dist/server ./dist/server
 
 # Run the server
-CMD ["npm run", "start:server"]
+CMD ["npm", "run", "start:server"]
