@@ -21,6 +21,7 @@ WORKDIR /app
 COPY --from=builder /app/package.json ./
 
 # Copy built outputs
+COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/dist/client ./dist/client
 COPY --from=builder /app/dist/server ./dist/server
 
