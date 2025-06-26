@@ -25,5 +25,8 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/dist/client ./dist/client
 COPY --from=builder /app/dist/server ./dist/server
 
+ENV SERVER_PORT=8080
+EXPOSE ${SERVER_PORT}
+
 # Run the server
 CMD ["npm", "run", "start:server"]
