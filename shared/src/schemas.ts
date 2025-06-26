@@ -5,7 +5,7 @@
  * Also used to generate TypeScript types for the client.
  */
 import { z } from 'zod';
-import { EntityType } from './constants.ts';
+import { EntityType } from './constants';
 
 
 export const HeaderDataSchema = z.object({

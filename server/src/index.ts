@@ -1,12 +1,12 @@
 
-import { getModuleName } from '@server/utils.ts';
+import { getModuleName } from '@server/utils';
 import { logger } from '@shared/logger';
 import cors from 'cors';
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { config } from './config.ts';
-import routes from './routes.ts';
+import { config } from './config';
+import routes from './routes';
 
 
 const log = logger(getModuleName(import.meta.url));
@@ -28,13 +28,13 @@ app.use('', routes);
 
 // Serve static client files in production
 if (config.serverEnv === 'production') {
-    const clientDistPath = path.resolve(DIR_NAME, '../client/dist');
+    const clientDistPath = path.resolve(DIR_NAME, '../../../client');
     app.use(express.static(clientDistPath));
 
     // Serve index.html on unknown routes (for SPA fallback)
-    app.get('*', (_req, res) => {
-        res.sendFile(path.join(clientDistPath, 'index.html'));
-    });
+    // app.get('*', (_req, res) => {
+    //     res.sendFile(path.join(clientDistPath, 'index.html'));
+    // });
 } else {
     log.debug('🚧 Development mode: client served separately via Vite dev server');
 }

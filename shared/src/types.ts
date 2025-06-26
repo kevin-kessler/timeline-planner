@@ -6,7 +6,7 @@ import {
     FooterDataSchema,
     HeaderDataSchema,
     RowDataSchema,
-} from './schemas.ts';
+} from './schemas';
 
 
 export type HeaderData = z.infer<typeof HeaderDataSchema>;

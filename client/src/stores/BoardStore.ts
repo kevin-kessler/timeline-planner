@@ -1,6 +1,6 @@
-import { config } from '@client/config.ts';
+import { config } from '@client/config';
 import { EntityNotFoundError } from '@client/errors/EntityNotFoundError';
-import { EntityType } from '@shared/constants.ts';
+import { EntityType } from '@shared/constants';
 import { logger } from '@shared/logger';
 import {
     type BoardData,
@@ -9,7 +9,7 @@ import {
     type FooterData,
     type HeaderData,
     type RowData,
-} from '@shared/types.ts';
+} from '@shared/types';
 import { defineStore } from 'pinia';
 import { v4 as uuidv4 } from 'uuid';
 

@@ -6,8 +6,8 @@
         "moduleResolution": "bundler",
         "resolveJsonModule": true,
         "forceConsistentCasingInFileNames": true,
-        "outDir": "dist",
         "baseUrl": ".",
+        "outDir": "../dist/client",
         "strict": true,
         "noEmit": true,
         "paths": {
@@ -24,9 +24,7 @@
             "vue",
         ],
     },
-    "exclude": [
-        "dist"
-    ],
+    "exclude": [],
     "include": [
         "src/**/*",
         "src/**/*.vue",

@@ -14,20 +14,20 @@ For example for planning and discussing with management about which products / s
 - Optionally use fixed columns on lanes (showing header titles and comment sections per column)
 - Save, edit, or delete boards, lanes, and cards.
 
+
 ## 📦 Persistence:
 - The server currently persists boards as `.json` files on the backend.
+
 
 ## 🖼️ UI Example
 ![UI Example](.doc/ui.png)
 
----
 
 ## 📦 Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18+)
 - [pnpm](https://pnpm.io/) (v8+)
 
----
 
 ## 🚀 Development
 
@@ -44,26 +44,24 @@ This runs:
 
 > Make sure you have a `.env` file at the project root. See `.env.example` for reference.
 
----
 
 ## 🏗️ Build
 
-To type-check and build both the client and server:
-
 ```bash
-pnpm build
+pnpm build           # Type-check and build both, the client and server
+pnpm build:client    # Build client to client/dist
+pnpm build:server    # Build server to server/dist
 ```
 
-Individual commands:
+
+## ✅ Type Checking
 
 ```bash
-pnpm build:client       # Build Vite app to client/dist
 pnpm type-check         # Run type-checking on client and server
 pnpm type-check:client  # Run type-checking on client only
 pnpm type-check:server  # Run type-checking on server only
 ```
 
----
 
 ## 🧪 Linting
 
@@ -79,7 +77,6 @@ Auto-fix linting issues:
 pnpm lint-fix
 ```
 
----
 
 ## 📁 Project Structure
 
@@ -92,7 +89,6 @@ pnpm lint-fix
 └── package.json
 ```
 
----
 
 ## 📜 License
 

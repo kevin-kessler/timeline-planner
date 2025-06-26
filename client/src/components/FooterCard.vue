@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useBoardStore } from '@client/stores/BoardStore';
-import type { FooterData } from '@shared/types.ts';
+import type { FooterData } from '@shared/types';
 import Button from 'primevue/button';
 import Textarea from 'primevue/textarea';
 import { useConfirm } from 'primevue/useconfirm';

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useBoardStore } from '@client/stores/BoardStore';
-import type { BodyData } from '@shared/types.ts';
+import type { BodyData } from '@shared/types';
 import Button from 'primevue/button';
 import Dialog from 'primevue/dialog';
 import InputText from 'primevue/inputtext';

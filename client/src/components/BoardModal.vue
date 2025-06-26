@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useBoardStore } from '@client/stores/BoardStore';
 import { EntityType } from '@shared/constants';
-import type { BoardData, BoardInfo } from '@shared/types.ts';
+import type { BoardData, BoardInfo } from '@shared/types';
 import Button from 'primevue/button';
 import Dialog from 'primevue/dialog';
 import InputText from 'primevue/inputtext';
