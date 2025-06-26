@@ -40,6 +40,6 @@ if (config.serverEnv === 'production') {
 }
 
 // Start server
-app.listen(config.serverPort, () => {
-    log.debug(`✅ Board API listening on http://localhost:${config.serverPort}`);
+app.listen(Number(config.serverPort), '0.0.0.0', () => {
+    log.debug(`✅ Board API listening on http://0.0.0.0:${config.serverPort}`);
 });
