@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useBoardStore } from '@client/stores/BoardStore.ts';
+import { useBoardStore } from '@client/stores/BoardStore';
 import { EntityType } from '@shared/constants';
 import type { BoardData, BoardInfo } from '@shared/types.ts';
 import Button from 'primevue/button';

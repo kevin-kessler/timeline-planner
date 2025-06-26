@@ -3,8 +3,8 @@
 import BodyCardModal from '@client/components/BodyCardModal.vue';
 import RowModal from '@client/components/RowModal.vue';
 import RowPanel from '@client/components/RowPanel.vue';
-import { useBoardStore } from '@client/stores/BoardStore.ts';
-import { useDarkModeStore } from '@client/stores/DarkModeStore.ts';
+import { useBoardStore } from '@client/stores/BoardStore';
+import { useDarkModeStore } from '@client/stores/DarkModeStore';
 import type { BodyData, RowData } from '@shared/types.ts';
 import Button from 'primevue/button';
 import { useToast } from 'primevue/usetoast';

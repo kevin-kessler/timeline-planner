@@ -1,4 +1,4 @@
-import { DARK_MODE_CLASS } from '@client/stores/DarkModeStore.ts';
+import { DARK_MODE_CLASS } from '@client/stores/DarkModeStore';
 import { definePreset } from '@primeuix/themes';
 import Nora from '@primeuix/themes/nora';
 import { createPinia } from 'pinia';

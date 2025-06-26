@@ -1,4 +1,4 @@
-import { useBoardStore } from '@client/stores/BoardStore.ts';
+import { useBoardStore } from '@client/stores/BoardStore';
 import { storeToRefs } from 'pinia';
 import { onBeforeUnmount, onMounted } from 'vue';
 
@@ -28,6 +28,7 @@ export function useNavigationGuard() {
     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
         if (boardHasUnsavedChanges.value) {
             event.preventDefault();
+            // eslint-disable-next-line no-param-reassign
             event.returnValue = ''; // Still required for Chrome, even though deprecated
         }
     };

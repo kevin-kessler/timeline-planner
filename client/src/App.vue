@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import BoardView from '@client/components/BoardView.vue';
 import { useNavigationGuard } from '@client/composables/useUnsavedChangesWarning';
-import { useBoardStore } from '@client/stores/BoardStore.ts';
+import { useBoardStore } from '@client/stores/BoardStore';
 import { EntityType } from '@shared/constants.ts';
 import type { BoardData, BoardInfo } from '@shared/types.ts';
 import Button from 'primevue/button';
