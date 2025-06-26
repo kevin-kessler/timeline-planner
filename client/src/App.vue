@@ -2,8 +2,8 @@
 import BoardView from '@client/components/BoardView.vue';
 import { useNavigationGuard } from '@client/composables/useUnsavedChangesWarning';
 import { useBoardStore } from '@client/stores/BoardStore';
-import { EntityType } from '@shared/constants.ts';
-import type { BoardData, BoardInfo } from '@shared/types.ts';
+import { EntityType } from '@shared/constants';
+import type { BoardData, BoardInfo } from '@shared/types';
 import Button from 'primevue/button';
 import ConfirmPopup from 'primevue/confirmpopup';
 import Select from 'primevue/select';

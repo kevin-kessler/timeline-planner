@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useBoardStore } from '@client/stores/BoardStore';
-import type { BodyData } from '@shared/types.ts';
+import type { BodyData } from '@shared/types';
 import Button from 'primevue/button';
 import { useConfirm } from 'primevue/useconfirm';
 

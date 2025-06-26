@@ -26,7 +26,8 @@ COPY --from=builder /app/pnpm-lock.yaml ./
 RUN corepack enable && corepack prepare pnpm@latest --activate && pnpm install --prod
 
 # Copy built outputs
-COPY --from=builder /app/client/dist ./client/dist
+COPY --from=builder /app/dist/client ./dist/client
+COPY --from=builder /app/dist/server ./dist/server
 
 # Run the server
-CMD ["node", "server/src/index.js"]
+CMD ["pnpm", "start:server"]

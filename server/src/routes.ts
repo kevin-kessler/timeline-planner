@@ -1,6 +1,6 @@
 
-import { getModuleName } from '@server/utils.ts';
-import { logger } from '@shared/logger.ts';
+import { getModuleName } from '@server/utils';
+import { logger } from '@shared/logger';
 import type { Request, Response } from 'express';
 import { Router } from 'express';
 import fs from 'fs/promises';
@@ -14,7 +14,7 @@ import {
     resolveHistoryDirPath,
     writeBoardFile,
     writeBoardHistoryFile,
-} from './boardIO.ts';
+} from './boardIO';
 
 
 const log = logger(getModuleName(import.meta.url));

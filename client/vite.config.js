@@ -11,8 +11,7 @@ export default defineConfig({
     envDir: path.resolve(DIRNAME, '../'), // Loads .env from project root
     plugins: [vue()],
     build: {
-        outDir: path.resolve(DIRNAME, 'dist'),
-        emptyOutDir: true,
+        outDir: path.resolve(DIRNAME, '../dist/client'),
     },
     resolve: {
         alias: {

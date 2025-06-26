@@ -1,7 +1,7 @@
 node_modules
-client/dist
-coverage
+dist
 server/board-data/
+coverage
 
 .vscode
 .vscode/*

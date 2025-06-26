@@ -1,11 +1,11 @@
-import { getModuleName } from '@server/utils.ts';
+import { getModuleName } from '@server/utils';
 import { logger } from '@shared/logger';
 import { BoardDataSchema, BoardInfoSchema } from '@shared/schemas';
 import type { BoardData, BoardInfo } from '@shared/types';
 import { format } from 'date-fns';
 import fs, { readdir } from 'fs/promises';
 import path from 'path';
-import { config } from './config.ts';
+import { config } from './config';
 
 
 const log = logger(getModuleName(import.meta.url));

@@ -18,6 +18,12 @@ export default [
                 extraFileExtensions: ['.vue'],
             },
         },
+        rules: {
+            'import/extensions': ['error', 'ignorePackages', {
+                ts: 'never',
+                tsx: 'never',
+            }],
+        },
     },
 
     // Server + Shared  overrides
@@ -32,6 +38,12 @@ export default [
                 ...globals.node,
                 NodeJS: 'readonly',
             },
+        },
+        rules: {
+            'import/extensions': ['error', 'ignorePackages', {
+                ts: 'never',
+                tsx: 'never',
+            }],
         },
     },
 ];

@@ -2,15 +2,16 @@
     "compilerOptions": {
         "target": "ESNext",
         "module": "ESNext",
-        "allowImportingTsExtensions": true,
+        "allowImportingTsExtensions": false,
         "esModuleInterop": true,
         "moduleResolution": "node",
         "resolveJsonModule": true,
         "forceConsistentCasingInFileNames": true,
         "verbatimModuleSyntax": true,
         "baseUrl": ".",
+        "outDir": "../dist/server",
         "strict": true,
-        "noEmit": true,
+        "noEmit": false,
         "paths": {
             "@server/*": [
                 "src/*"
