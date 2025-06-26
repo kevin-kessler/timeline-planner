@@ -7,7 +7,7 @@
         "dev": "run-p dev:client dev:server",
         "dev:client": "vite --config client/vite.config.js",
         "dev:server": "tsx --tsconfig server/tsconfig.json server/src/index.ts",
-        "build": "run-p type-check build:client",
+        "build": "run-p type-check build:client build:server",
         "build:client": "vite build --config client/vite.config.js",
         "build:server": "tsc --project server/tsconfig.json && tsc-alias -p server/tsconfig.json --resolve-full-paths",
         "start": "npm run start:server",
