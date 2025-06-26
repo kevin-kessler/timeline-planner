@@ -1,5 +1,5 @@
 import { config } from '@client/config.ts';
-import { EntityNotFoundError } from '@client/errors/EntityNotFoundError.ts';
+import { EntityNotFoundError } from '@client/errors/EntityNotFoundError';
 import { EntityType } from '@shared/constants.ts';
 import { logger } from '@shared/logger';
 import {

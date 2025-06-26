@@ -1,6 +1,7 @@
 
 import { getModuleName } from '@server/utils.ts';
 import { logger } from '@shared/logger.ts';
+import type { Request, Response } from 'express';
 import { Router } from 'express';
 import fs from 'fs/promises';
 import {
@@ -19,7 +20,7 @@ import {
 const log = logger(getModuleName(import.meta.url));
 const router = Router();
 
-router.get('/board-data/:boardId', async (req, res) => {
+router.get('/board-data/:boardId', async (req: Request, res: Response) => {
     const boardId = assertBoardId(req.params.boardId);
     try {
         res.json(await readBoardFile(boardId));
@@ -30,7 +31,7 @@ router.get('/board-data/:boardId', async (req, res) => {
     }
 });
 
-router.post('/board-data/:boardId', async (req, res) => {
+router.post('/board-data/:boardId', async (req: Request, res: Response) => {
     const boardId = assertBoardId(req.params.boardId);
     try {
         const boardData = assertBoardData(req.body);
@@ -44,7 +45,7 @@ router.post('/board-data/:boardId', async (req, res) => {
     }
 });
 
-router.patch('/board-info/:boardId', async (req, res) => {
+router.patch('/board-info/:boardId', async (req: Request, res: Response) => {
     const oldBoardId = assertBoardId(req.params.boardId);
 
     try {
@@ -55,7 +56,8 @@ router.patch('/board-info/:boardId', async (req, res) => {
         const nameChanged = boardData.boardInfo.name !== newBoardInfo.name;
 
         if (!idChanged && !nameChanged) {
-            return res.status(200).json({ status: 'no changes' });
+            res.status(200).json({ status: 'no changes' });
+            return;
         }
 
         // Create backup of current board data
@@ -80,7 +82,7 @@ router.patch('/board-info/:boardId', async (req, res) => {
     }
 });
 
-router.get('/board-data/:boardId/history', async (req, res) => {
+router.get('/board-data/:boardId/history', async (req: Request, res: Response) => {
     const boardId = assertBoardId(req.params.boardId);
     const backupDir = resolveHistoryDirPath(boardId);
     try {

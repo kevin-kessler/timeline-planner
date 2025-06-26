@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useBoardStore } from '@client/stores/BoardStore.ts';
+import { useBoardStore } from '@client/stores/BoardStore';
 import type { HeaderData } from '@shared/types.ts';
 import Button from 'primevue/button';
 import InputText from 'primevue/inputtext';
