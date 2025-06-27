@@ -25,13 +25,16 @@ const emit = defineEmits<{
     clickEditRow: [rowData: RowData];
 }>();
 
+const CARD_GAP = 4; // Gap between cards in tailwind spacing units
+
 const isWrapEnabled = ref(false);
 
 const activeDropZone = ref<number | null>(null);
 const isEmptyDropZoneActive = ref(false);
 
 const extraDropZoneWidthStyle = computed(() => {
-    const style = `calc(${props.row.headers.length - props.row.bodies.length} * var(--card-width))`;
+    const numOfEmptyColumns = props.row.headers.length - props.row.bodies.length;
+    const style = `calc(${numOfEmptyColumns} * var(--card-width) + (${numOfEmptyColumns} - 1) * calc(var(--spacing) * ${CARD_GAP}))`;
     return style;
 });
 
@@ -143,7 +146,7 @@ const showDeleteRowConfirmation = () => {
                 <!-- Header Cards -->
                 <div
                     v-if="row.headers.length > 0"
-                    class="flex gap-4"
+                    :class="`flex gap-${CARD_GAP}`"
                 >
                     <div
                         v-for="(header) in row.headers"
@@ -159,7 +162,7 @@ const showDeleteRowConfirmation = () => {
                 <!-- Draggable Cards -->
                 <div
                     class="rowbody"
-                    :class="{ 'flex-wrap': isWrapEnabled }"
+                    :class="[{ 'flex-wrap': isWrapEnabled }, `gap-${CARD_GAP}`]"
                     @dragover.prevent
                 >
                     <template v-if="row.bodies.length > 0">
@@ -226,7 +229,7 @@ const showDeleteRowConfirmation = () => {
                 <!-- Footer cards -->
                 <div
                     v-if="row.footers.length > 0"
-                    class="flex gap-4"
+                    :class="`flex gap-${CARD_GAP}`"
                 >
                     <div
                         v-for="(footer) in row.footers"
@@ -257,7 +260,7 @@ const showDeleteRowConfirmation = () => {
     @apply transition-colors relative;
 }
 .rowbody {
-    @apply flex w-full gap-4 min-h-32;
+    @apply flex w-full min-h-32;
 }
 .rowempty {
     @apply flex w-full justify-center items-center text-center;
